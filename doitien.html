@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table style="width:70%">
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Crurrrency</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input id='giatrivao' type="number"></td>
+            <td>
+                <select name="" id="tientruoc" >
+                    <option value="a">VND</option>
+                    <option value="b">USD</option>
+            
+                </select>
+            </td>
+            <td><select name="" id="tiensau" > 
+            
+                <option value="a">VND</option> 
+                <option value="b">USD</option> 
+               
+            </select>
+            </td>
+            <td> <button onclick="doitien()" > Convert </button>
+            </td>
+        </tr>
+
+    </table>
+    <script>
+        function  doitien() {
+            let giatrivao=document.getElementById('giatrivao').value 
+            let tientruoc=document.getElementById('tientruoc').value
+            let tiensau=document.getElementById('tiensau').value
+            if (tientruoc==tiensau) {
+                alert(giatrivao)
+            }
+            if (tientruoc=='b' && tiensau=='a') {
+                alert(giatrivao*24000)
+            }
+            if (tientruoc=='a' && tiensau=='b') {
+                alert(giatrivao/24000)
+            }
+            
+        }
+    </script>
+</body>
+</html>
